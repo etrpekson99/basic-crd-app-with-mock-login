@@ -122,7 +122,7 @@ const LoginForm = ({ loginLocale }: { loginLocale: Record<string, string> }) => 
   }
 
   return (
-    <form className="flex flex-col" onSubmit={handleSubmit}>
+    <form className="flex flex-col" onSubmit={handleSubmit} data-testid="login-form">
       {inputs.map((input) => {
         const {
           id,
@@ -151,10 +151,9 @@ const LoginForm = ({ loginLocale }: { loginLocale: Record<string, string> }) => 
             : loginLocale['input.password.show'];
           inputType = showPassword ? 'text' : 'password';
           icon = (
-            <button type="button" onClick={handleShowPassword} data-testid="password-bttn">
+            <button type="button" onClick={handleShowPassword}>
               <p
                 className="absolute right-0 top-[10px] m-2 before:text-black-40 text-xs"
-                data-testid="password-label"
               >
                 {showPasswordLabel}
               </p>
