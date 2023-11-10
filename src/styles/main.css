@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: @apply font-poppins;
+    color: @apply text-black-100;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  input:disabled,
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 50%;
+  }
+}
+
+@layer components {
+  .button {
+    @apply flex items-center justify-center hover:drop-shadow-md rounded-lg text-sm w-fit py-3 px-6;
+  }
+
+  .input {
+    @apply p-2 rounded-lg text-sm;
+  }
+
+  .input::-webkit-outer-spin-button,
+  .input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .input:focus {
+    @apply outline-blue-100;
+  }
+}
