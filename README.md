@@ -20,6 +20,11 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Notes
+- Decided against adding validation for branch ID, username, and password since it is a security standart to not display detailed error messages during the log in
+- Made use of vitest over Jest as it is more lightweight
+- Made use of Zustand instead of Redux since it is also more lightweight and has less boilerplate code, while maintaining the ease of use that isn't usually offered by using local storage or context
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
